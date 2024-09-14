@@ -1,0 +1,14 @@
+# Rasa configuration files
+.env
+.rasa
+.rasa/*.db
+.rasa/*.json
+.rasa/*.log
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/

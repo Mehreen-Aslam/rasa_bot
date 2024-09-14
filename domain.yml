@@ -1,0 +1,106 @@
+version: "3.1"
+
+intents:
+  - greet
+  - provide_name
+  - mood_great
+  - mood_unhappy
+  - ask_for_help
+  - goodbye
+  - depression_symptoms
+  - managing_mental_health
+  - managing_stress
+  - regulating_emotions
+  - unhealthy_coping_skills
+  - reaching_goals
+  - improving_relationships
+  - increasing_self_awareness
+  - dealing_with_transitions
+  - parenting_support
+  - processing_trauma
+  - productivity_management
+  - appetite_sleep_changes
+  - losing_interest
+  - social_life_suffering
+  - changing_thinking_patterns
+  - improving_happiness
+  - mental_illness_symptoms
+  - affirm
+  - deny
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_text
+
+responses:
+  utter_ask_name:
+    - text: "What is your name?"
+  utter_greet_user:
+    - text: "Hello {name}!"
+  utter_acknowledge:
+    - text: "I understand."
+  utter_help_suggestions:
+    - text: "Here are some things you can try..."
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_managing_mental_health:
+    - text: "It's important to talk to a therapist if you're having trouble managing your mental health. A therapist can help you navigate your feelings and provide tools to manage them effectively."
+  utter_managing_stress:
+    - text: "If you're having trouble managing your stress, a therapist can help you learn healthy stress management skills and provide guidance on problem-solving to reduce stress."
+  utter_regulating_emotions:
+    - text: "A therapist can assist you in discovering techniques to regulate your emotions, whether it's managing anxiety or anger, and help you develop a plan to ensure your emotions serve you well."
+  utter_unhealthy_coping_skills:
+    - text: "Using unhealthy coping mechanisms can create more problems. A therapist can help you find healthier ways to cope with stress and address underlying issues."
+  utter_reaching_goals:
+    - text: "If you're struggling to reach your goals, a therapist can address motivational problems and help you overcome obstacles that are preventing your success."
+  utter_improving_relationships:
+    - text: "A therapist can assist you in improving your relationships by identifying issues and providing tools to form and maintain healthier connections."
+  utter_increasing_self_awareness:
+    - text: "If you want to understand your behaviors and patterns, a therapist can help increase your self-awareness and assist in breaking free from unhelpful patterns."
+  utter_dealing_with_transitions:
+    - text: "During major life transitions, a therapist can offer support and guidance to help you adapt and manage the emotional impact of these changes."
+  utter_parenting_support:
+    - text: "For parenting support, a therapist can provide guidance on parenting strategies and help you address any concerns or challenges you may have with your child."
+  utter_processing_trauma:
+    - text: "If you've experienced a traumatic event, a therapist can help you process it, prevent PTSD, and find meaning or growth from the experience."
+  utter_productivity_management:
+    - text: "When your mood affects your work, a therapist can help improve your mood and productivity through various strategies and techniques."
+  utter_appetite_sleep_changes:
+    - text: "Changes in appetite or sleep related to your emotional state can be addressed with a therapist, who can help you understand and manage these changes."
+  utter_losing_interest:
+    - text: "Losing interest in activities you used to enjoy can be a sign of something deeper. A therapist can help you uncover the reasons for this and develop a plan to regain your interest."
+  utter_social_life_suffering:
+    - text: "If your social life is suffering, a therapist can help you improve your social connections and address any underlying issues affecting your social interactions."
+  utter_changing_thinking_patterns:
+    - text: "A therapist can help you identify and change unhelpful thinking patterns that impact your life and mental well-being."
+  utter_improving_happiness:
+    - text: "If you feel like you're not as happy as you could be, a therapist can help you identify what's missing and make changes to improve your overall happiness."
+  utter_mental_illness_symptoms:
+    - text: "If you suspect you have symptoms of a mental illness, talking to a therapist can help you understand your symptoms and explore treatment options."
+  utter_affirm:
+    - text: "Got it!"
+
+actions:
+  - action_manage_mental_health
+  - action_manage_stress
+  - action_regulate_emotions
+  - action_unhealthy_coping_skills
+  - action_reach_goals
+  - action_improve_relationships
+  - action_increase_self_awareness
+  - action_deal_with_transitions
+  - action_parenting_support
+  - action_process_trauma
+  - action_manage_productivity
+  - action_address_appetite_sleep
+  - action_address_losing_interest
+  - action_improve_social_life
+  - action_change_thinking_patterns
+  - action_increase_happiness
+  - action_check_mental_illness_symptoms
+  - action_huggingface_fallback

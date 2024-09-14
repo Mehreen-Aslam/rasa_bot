@@ -1,0 +1,227 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - howdy
+      - good morning
+      - good evening
+      - what's up?
+
+  - intent: goodbye
+    examples: |
+      - goodbye
+      - see you later
+      - bye
+      - take care
+      - catch you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - indeed
+      - of course
+      - absolutely
+      - definitely
+      - that's right
+
+  - intent: deny
+    examples: |
+      - no
+      - not really
+      - definitely not
+      - I don’t think so
+      - I’m afraid not
+
+  - intent: depression_symptoms
+    examples: |
+      - I feel sad all the time
+      - I have no energy
+      - I am always tired
+      - I can't sleep properly
+      - I feel hopeless
+      - I don’t find joy in anything
+      - I think I might be depressed
+      - I feel worthless
+      - I don't care about anything anymore
+      - I’m experiencing persistent sadness
+      - I’m struggling with a lack of motivation
+
+  - intent: ask_for_help
+    examples: |
+      - Can you help me with my feelings?
+      - I need someone to talk to
+      - How can I feel better?
+      - I need help with my depression
+      - Can you offer me some advice?
+      - I’m looking for support
+
+  - intent: provide_name
+    examples: |
+      - My name is [John](name)
+      - I'm [John](name)
+      - You can call me [John](name)
+      - It's [John](name)
+      - I am [John](name)
+      - My name’s [John](name)
+      - Just call me [John](name)
+      - I’d like you to remember my name is [John](name)
+      - [John](name) here
+
+  - intent: mood_great
+    examples: |
+      - I feel awesome
+      - I am happy today
+      - Life is great
+      - I’m feeling fantastic
+      - Everything is going well
+      - I’m on top of the world
+
+  - intent: mood_unhappy
+    examples: |
+      - I am feeling down
+      - Today is a bad day
+      - I am not feeling good
+      - I feel terrible
+      - I’m struggling with my mood
+      - I’m feeling quite low
+
+  - intent: managing_mental_health
+    examples: |
+      - I’m struggling to manage my mental health
+      - I can’t balance my responsibilities well
+      - I need help processing my feelings
+      - I feel overwhelmed and stressed
+      - My mental health is a challenge right now
+      - I’m having a hard time coping with everything
+
+  - intent: managing_stress
+    examples: |
+      - I’m having trouble managing my stress
+      - My stress levels are too high
+      - I feel stressed out all the time
+      - I can’t seem to reduce my stress
+      - My stress is affecting my daily life
+
+  - intent: regulating_emotions
+    examples: |
+      - I have difficulty regulating my emotions
+      - I’m struggling with anxiety and anger
+      - My emotions are overwhelming me
+      - I can’t control my mood swings
+      - I’m having trouble keeping my emotions in check
+
+  - intent: unhealthy_coping_skills
+    examples: |
+      - I’m using unhealthy coping mechanisms
+      - I overeat when I’m stressed
+      - I drink to unwind
+      - I rely on unhealthy habits to cope
+      - I’ve developed some bad habits for dealing with stress
+
+  - intent: reaching_goals
+    examples: |
+      - I’m struggling to reach my goals
+      - I can’t overcome obstacles in my life
+      - I need help with motivation
+      - I’m having trouble achieving my objectives
+      - I’m finding it hard to stay focused on my goals
+
+  - intent: improving_relationships
+    examples: |
+      - I want to improve my relationships
+      - I have trouble maintaining healthy connections
+      - I’m struggling with relationship issues
+      - I need advice on building better relationships
+      - I’m looking to enhance my interactions with others
+
+  - intent: increasing_self_awareness
+    examples: |
+      - I want to understand why I do certain things
+      - I need help with self-awareness
+      - I don’t understand my behavior patterns
+      - I’m trying to gain more insight into myself
+      - I want to explore my personal motivations
+
+  - intent: dealing_with_transitions
+    examples: |
+      - I’m going through a major life transition
+      - I need support during a big change in my life
+      - I’m struggling with adapting to new circumstances
+      - I’m dealing with a significant life change
+      - I’m having difficulty adjusting to new situations
+
+  - intent: parenting_support
+    examples: |
+      - I need help with parenting
+      - I’m unsure about my parenting skills
+      - I want support with my child’s behavior
+      - I’m facing challenges with my parenting approach
+      - I need advice on how to handle my child’s behavior
+
+  - intent: processing_trauma
+    examples: |
+      - I need help processing a traumatic event
+      - I’ve experienced a trauma and need support
+      - I’m struggling to deal with a past trauma
+      - I’m finding it hard to cope with a traumatic experience
+      - I need support in working through a traumatic event
+
+  - intent: productivity_management
+    examples: |
+      - My mood is affecting my work
+      - I’m not productive due to my emotional state
+      - My emotional issues are impacting my job performance
+      - I’m having trouble staying productive
+      - My current emotional state is hindering my work efficiency
+
+  - intent: appetite_sleep_changes
+    examples: |
+      - My emotional state is affecting my appetite
+      - I’m having trouble sleeping due to stress
+      - My mood is impacting my sleep habits
+      - I’m experiencing changes in my appetite and sleep patterns
+      - My stress is affecting both my sleep and eating habits
+
+  - intent: losing_interest
+    examples: |
+      - I’ve lost interest in activities I used to enjoy
+      - I’m not finding joy in things I used to love
+      - I’ve lost interest in my hobbies
+      - I feel detached from things I once cared about
+      - My enthusiasm for previous interests has diminished
+
+  - intent: social_life_suffering
+    examples: |
+      - My social life is suffering
+      - I don’t have a fulfilling social life
+      - I feel isolated and disconnected
+      - I’m struggling to maintain social connections
+      - My interactions with others have decreased significantly
+
+  - intent: changing_thinking_patterns
+    examples: |
+      - I want to change my unhelpful thinking patterns
+      - I’m struggling with negative thoughts
+      - My thinking patterns are affecting my life
+      - I need help altering my thought processes
+      - I’m trying to shift away from negative thinking patterns
+
+  - intent: improving_happiness
+    examples: |
+      - I’m not as happy as I could be
+      - I feel like something is missing in my life
+      - I want to improve my overall happiness
+      - I’m seeking ways to enhance my happiness
+      - I’m looking for strategies to increase my joy in life
+
+  - intent: mental_illness_symptoms
+    examples: |
+      - I suspect I have symptoms of a mental illness
+      - I’m experiencing symptoms I don’t understand
+      - I’m worried about my mental health
+      - I’m noticing signs of a mental health issue
+      - I’m concerned about the symptoms I’ve been having

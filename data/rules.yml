@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to bot challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_help_suggestions
+
+- rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_huggingface_fallback

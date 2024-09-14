@@ -1,0 +1,139 @@
+version: "3.1"
+
+stories:
+  - story: greet and get name
+    steps:
+      - intent: greet
+      - action: utter_ask_name
+      - intent: provide_name
+        entities:
+          - name: "John"
+      - action: utter_greet_user
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet_user
+      - intent: mood_great
+      - action: utter_acknowledge
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet_user
+      - intent: mood_unhappy
+      - action: utter_acknowledge
+      - action: utter_help_suggestions
+      - intent: affirm
+      - action: utter_acknowledge
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet_user
+      - intent: mood_unhappy
+      - action: utter_acknowledge
+      - action: utter_help_suggestions
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: user expresses depression symptoms
+    steps:
+      - intent: depression_symptoms
+      - action: utter_acknowledge
+
+  - story: user asks for help
+    steps:
+      - intent: ask_for_help
+      - action: utter_help_suggestions
+
+  - story: user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: managing mental health
+    steps:
+      - intent: managing_mental_health
+      - action: utter_managing_mental_health
+
+  - story: managing stress
+    steps:
+      - intent: managing_stress
+      - action: utter_managing_stress
+
+  - story: regulating emotions
+    steps:
+      - intent: regulating_emotions
+      - action: utter_regulating_emotions
+
+  - story: unhealthy coping skills
+    steps:
+      - intent: unhealthy_coping_skills
+      - action: utter_unhealthy_coping_skills
+
+  - story: reaching goals
+    steps:
+      - intent: reaching_goals
+      - action: utter_reaching_goals
+
+  - story: improving relationships
+    steps:
+      - intent: improving_relationships
+      - action: utter_improving_relationships
+
+  - story: increasing self-awareness
+    steps:
+      - intent: increasing_self_awareness
+      - action: utter_increasing_self_awareness
+
+  - story: dealing with transitions
+    steps:
+      - intent: dealing_with_transitions
+      - action: utter_dealing_with_transitions
+
+  - story: parenting support
+    steps:
+      - intent: parenting_support
+      - action: utter_parenting_support
+
+  - story: processing trauma
+    steps:
+      - intent: processing_trauma
+      - action: utter_processing_trauma
+
+  - story: productivity management
+    steps:
+      - intent: productivity_management
+      - action: utter_productivity_management
+
+  - story: appetite and sleep changes
+    steps:
+      - intent: appetite_sleep_changes
+      - action: utter_appetite_sleep_changes
+
+  - story: losing interest
+    steps:
+      - intent: losing_interest
+      - action: utter_losing_interest
+
+  - story: social life suffering
+    steps:
+      - intent: social_life_suffering
+      - action: utter_social_life_suffering
+
+  - story: changing thinking patterns
+    steps:
+      - intent: changing_thinking_patterns
+      - action: utter_changing_thinking_patterns
+
+  - story: improving happiness
+    steps:
+      - intent: improving_happiness
+      - action: utter_improving_happiness
+
+  - story: mental illness symptoms
+    steps:
+      - intent: mental_illness_symptoms
+      - action: utter_mental_illness_symptoms
+
