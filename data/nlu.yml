@@ -33,22 +33,25 @@ nlu:
       - no
       - not really
       - definitely not
-      - I don’t think so
-      - I’m afraid not
+      - I don't think so
+      - I'm afraid not
 
   - intent: depression_symptoms
     examples: |
       - I feel sad all the time
+      - I want to die 
+      - I want to kill someone
+      - There is no one to help me
       - I have no energy
       - I am always tired
       - I can't sleep properly
       - I feel hopeless
-      - I don’t find joy in anything
+      - I don't find joy in anything
       - I think I might be depressed
       - I feel worthless
       - I don't care about anything anymore
-      - I’m experiencing persistent sadness
-      - I’m struggling with a lack of motivation
+      - I'm experiencing persistent sadness
+      - I'm struggling with a lack of motivation
 
   - intent: ask_for_help
     examples: |
@@ -57,7 +60,7 @@ nlu:
       - How can I feel better?
       - I need help with my depression
       - Can you offer me some advice?
-      - I’m looking for support
+      - I'm looking for support
 
   - intent: provide_name
     examples: |
@@ -66,9 +69,9 @@ nlu:
       - You can call me [John](name)
       - It's [John](name)
       - I am [John](name)
-      - My name’s [John](name)
+      - My name's [John](name)
       - Just call me [John](name)
-      - I’d like you to remember my name is [John](name)
+      - I'd like you to remember my name is [John](name)
       - [John](name) here
 
   - intent: mood_great
@@ -76,9 +79,26 @@ nlu:
       - I feel awesome
       - I am happy today
       - Life is great
-      - I’m feeling fantastic
+      - I am very happy today
       - Everything is going well
-      - I’m on top of the world
+      - Life is beautiful, and I'm loving every moment
+      - I am happy today
+      - I'm filled with positivity and joy
+      - I feel incredibly lucky and blessed
+      - Everything is going well
+      - I'm excited for all the great things happening in my life
+      - I'm so grateful for all the good in my life
+      - I am supper happy today
+      - Life is great
+      - My energy is through the roof!
+      - Everything is going well
+      - I'm incredibly proud of myself and my progress
+      - Today is a fantastic day, and it's only getting better
+      - I am happy today
+      - Life is great
+      - Every moment is filled with endless possibilities
+      - Everything is going well
+      - I'm radiating confidence and enthusiasm
 
   - intent: mood_unhappy
     examples: |
@@ -86,17 +106,36 @@ nlu:
       - Today is a bad day
       - I am not feeling good
       - I feel terrible
-      - I’m struggling with my mood
-      - I’m feeling quite low
+      - I'm struggling with my mood
+      - I'm feeling quite low
 
   - intent: managing_mental_health
     examples: |
-      - I’m struggling to manage my mental health
-      - I can’t balance my responsibilities well
+      - I'm struggling to manage my mental health
+      - I can't balance my responsibilities well
       - I need help processing my feelings
       - I feel overwhelmed and stressed
       - My mental health is a challenge right now
-      - I’m having a hard time coping with everything
+      - I'm having a hard time coping with everything
+      - I'm feeling sad
+      - I'm not in a good mood
+      - I don't feel like myself
+      - I'm mentally exhausted
+      - I'm emotionally drained
+      - I'm not okay right now
+      - I feel like I'm losing control
+      - Everything feels too much for me to handle
+      - I need someone to talk to
+      - I can’t seem to find any motivation
+      - I’m really struggling to stay positive
+      - It’s hard for me to deal with things right now
+      - I feel stuck and helpless
+      - I’m so stressed out, I don’t know what to do
+      - I just feel really down lately
+      - My mind feels so heavy
+      - I can’t seem to shake this feeling of anxiety
+      - I feel emotionally overwhelmed
+      - I’m tired of pretending I’m okay
 
   - intent: managing_stress
     examples: |
@@ -212,11 +251,11 @@ nlu:
 
   - intent: improving_happiness
     examples: |
-      - I’m not as happy as I could be
+      - I'm not as happy as I could be
       - I feel like something is missing in my life
       - I want to improve my overall happiness
-      - I’m seeking ways to enhance my happiness
-      - I’m looking for strategies to increase my joy in life
+      - I'm seeking ways to enhance my happiness
+      - I'm looking for strategies to increase my joy in life
 
   - intent: mental_illness_symptoms
     examples: |
@@ -225,3 +264,22 @@ nlu:
       - I’m worried about my mental health
       - I’m noticing signs of a mental health issue
       - I’m concerned about the symptoms I’ve been having
+  - intent: fallback
+    examples: |
+      - I'm not sure what you mean
+      - What are you trying to say?
+      - Can you explain that again?
+      - I don't understand
+      - Could you clarify that for me?
+      - I didn't get that, could you rephrase it?
+      - Can you say that differently?
+      - I'm not following
+      - I'm not sure how to respond to that
+      - Sorry, I don't get it
+      - Can you be more specific?
+      - I'm a bit confused by that
+      - Can you elaborate on that?
+      - Could you put that another way?
+      - I'm not sure what you mean by that
+      - Sorry, I didn't understand what you meant
+  

@@ -40,12 +40,132 @@ slots:
 responses:
   utter_ask_name:
     - text: "What is your name?"
+  utter_fallback:
+    - text: "I'm sorry, I didn't understand that. Could you please rephrase?"
+    - text: "I didn’t quite catch that. Can you explain in a different way?"
+    - text: "Let me know if you need help with something specific!"
+
   utter_greet_user:
     - text: "Hello {name}!"
+  
+  utter_happy:
+    - text: "I'm glad to hear that you're feeling great!"
+
+  utter_greet_no_name:
+    - text: "Hello! How can I assist you today?"
+
   utter_acknowledge:
+    - text: "I understand.what can i do for you"
     - text: "I understand."
+    - text: "I understand.what can i do for you"
+    - text: "I understand.what can i do for you"
+
+
   utter_help_suggestions:
     - text: "Here are some things you can try..."
+    - text: "Feeling joyless can be a challenging and isolating experience. Let's explore possible reasons and potential solutions:
+
+Possible Reasons:
+
+1. Depression
+2. Anxiety
+3. Burnout
+4. Trauma or PTSD
+5. Lack of purpose or meaning
+6. Social isolation
+7. Chronic stress
+8. Medical conditions (e.g., hypothyroidism, chronic pain)
+
+Actionable Steps:
+
+1. Consult a mental health professional.
+2. Engage in activities that brought joy in the past (even if it doesn't feel enjoyable now).
+3. Try new experiences (hobbies, classes, volunteering).
+4. Practice self-care (exercise, meditation, relaxation techniques).
+5. Connect with others (friends, family, support groups).
+6. Challenge negative thoughts and reframe perspectives.
+7. Set small, achievable goals.
+
+Quick Joy-Boosters:
+
+1. Watch a funny video or movie.
+2. Listen to uplifting music.
+3. Take a short walk outside.
+4. Practice gratitude journaling.
+5. Do a creative activity (drawing, writing, painting)."
+    - text: "Feeling tired all the time can be debilitating and affect your daily life. Let's explore possible reasons and potential solutions:
+
+Physical Causes:
+
+1. Sleep disorders (insomnia, sleep apnea)
+2. Nutritional deficiencies (iron, vitamin B12, magnesium)
+3. Chronic fatigue syndrome
+4. Hypothyroidism
+5. Anemia
+6. Diabetes
+7. Medication side effects
+
+Lifestyle Factors:
+
+1. Poor sleep habits (irregular schedule, inadequate sleep)
+2. Lack of exercise
+3. Stress and anxiety
+4. Poor diet (high sugar, caffeine, processed foods)
+5. Dehydration
+6. Overwork or burnout
+
+Mental Health:
+
+1. Depression
+2. Anxiety disorders
+3. Burnout
+4. Trauma or PTSD
+
+Actionable Steps:
+
+1. Consult a healthcare professional for a thorough check-up.
+2. Establish a consistent sleep schedule (7-9 hours/night).
+3. Engage in regular exercise (30 minutes/day).
+4. Practice stress-reducing techniques (meditation, yoga, deep breathing).
+5. Improve diet (balanced, whole foods).
+6. Stay hydrated (8-10 glasses/day).
+7. Set boundaries and prioritize self-care.
+
+"
+
+    - text: "I'm concerned about your statement. If you're experiencing thoughts of harming someone, please seek help immediately.Local Support:
+
+1. Contact your healthcare provider or therapist.
+2. Visit your local emergency room or mental health crisis center.
+3. Reach out to a trusted friend or family member.
+
+"
+
+    - text: "I'm deeply concerned about your well-being. If you're feeling suicidal or having thoughts of self-harm, please know that there are people who care about you and want to help.
+
+"
+    - text: "I'm here to listen and offer support. You can share what's on your mind, and I'll provide a non-judgmental and empathetic space.
+
+Would you like to talk about:
+
+1. Something specific (stress, relationships, work)?
+2. Your feelings (anxiety, sadness, happiness)?
+3. Goals or aspirations?
+4. Or just need someone to listen?
+
+Type away, and I'll respond with understanding and support.
+"
+
+    - text: "Would you like to talk about what's worrying you? Sometimes sharing your concerns can help clarify things and give you a fresh perspective.
+
+If you're feeling overwhelmed, we can also explore resources together:
+
+1. Breathing exercises: Take slow, deep breaths in through your nose and out through your mouth.
+2. Physical activity: Engage in gentle stretches or short walks.
+3. Mindfulness: Focus on the present moment.
+
+If you're comfortable sharing, what's causing your worry?"
+
   utter_goodbye:
     - text: "Goodbye! Have a great day!"
   utter_managing_mental_health:
@@ -104,3 +224,5 @@ actions:
   - action_increase_happiness
   - action_check_mental_illness_symptoms
   - action_huggingface_fallback
+  
+  

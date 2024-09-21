@@ -69,6 +69,7 @@ class ActionManageStress(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(text="If you're having trouble managing your stress, a therapist can help you learn healthy stress management skills and provide guidance on problem-solving to reduce stress.")
+        dispatcher.utter_message(text="")
         return []
 
 class ActionRegulateEmotions(Action):
@@ -191,36 +192,36 @@ class ActionCheckMentalIllnessSymptoms(Action):
         dispatcher.utter_message(text="If you suspect you have symptoms of a mental illness, talking to a therapist can help you understand your symptoms and explore treatment options.")
         return []
 
-class ActionStoreName(Action):
-    def name(self) -> Text:
-        return "action_store_name"
+# class ActionStoreName(Action):
+#     def name(self) -> Text:
+#         return "action_store_name"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Get the user's name from their message
-        user_name = tracker.get_slot("name")
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         # Get the user's name from their message
+#         user_name = tracker.get_slot("name")
         
-        # Store the name in MongoDB or just in the slot
-        # (MongoDB storage will be automatic due to the tracker store)
-        if user_name:
-            response = f"Nice to meet you, {user_name}!"
-        else:
-            response = "I didn't catch your name. Could you tell me again?"
+#         # Store the name in MongoDB or just in the slot
+#         # (MongoDB storage will be automatic due to the tracker store)
+#         if user_name:
+#             response = f"Nice to meet you, {user_name}!"
+#         else:
+#             response = "I didn't catch your name. Could you tell me again?"
 
-        dispatcher.utter_message(text=response)
+#         dispatcher.utter_message(text=response)
 
-        # Store the name in a slot
-        return [SlotSet("name", user_name)]
+#         # Store the name in a slot
+#         return [SlotSet("name", user_name)]
 
-class ActionLoginCheck(Action):
-    def name(self) -> Text:
-        return "action_login_check"
+# class ActionLoginCheck(Action):
+#     def name(self) -> Text:
+#         return "action_login_check"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        user_name = tracker.get_slot("name")
-        if user_name:
-            dispatcher.utter_message(text=f"Welcome back, {user_name}! How can I assist you today?")
-        else:
-            dispatcher.utter_message(text="It looks like you're not logged in. Please provide your name to proceed.")
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         user_name = tracker.get_slot("name")
+#         if user_name:
+#             dispatcher.utter_message(text=f"Welcome back, {user_name}! How can I assist you today?")
+#         else:
+#             dispatcher.utter_message(text="It looks like you're not logged in. Please provide your name to proceed.")
         
-        return []
+#         return []
         

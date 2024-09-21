@@ -8,22 +8,29 @@ stories:
       - intent: provide_name
         entities:
           - name: "John"
+      - slot_was_set:
+          - name: "John"
       - action: utter_greet_user
 
+  - story: greet without name
+    steps:
+      - intent: greet
+      - action: utter_greet_no_name
   - story: happy path
     steps:
       - intent: greet
-      - action: utter_greet_user
+      - action: utter_greet_no_name
       - intent: mood_great
-      - action: utter_acknowledge
+      - action: utter_happy
 
   - story: sad path 1
     steps:
       - intent: greet
       - action: utter_greet_user
       - intent: mood_unhappy
-      - action: utter_acknowledge
       - action: utter_help_suggestions
+      - action: utter_acknowledge
+      # - action: utter_help_suggestions
       - intent: affirm
       - action: utter_acknowledge
 
