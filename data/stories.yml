@@ -4,18 +4,59 @@ stories:
   - story: greet and get name
     steps:
       - intent: greet
-      - action: utter_ask_name
-      - intent: provide_name
-        entities:
-          - name: "John"
-      - slot_was_set:
-          - name: "John"
+      # - action: utter_ask_name
+      # - intent: provide_name
+      #   entities:
+      #     - name: "John"
+      # - slot_was_set:
+      #     - name: "John"
       - action: utter_greet_user
+
+  - story: explain_depression
+    steps:
+      - intent: ask_about_depression
+      - action: utter_depression_info
+
+  - story: explain_anxiety
+    steps:
+      - intent: ask_about_anxiety
+      - action: utter_anxiety_info
+
+  - story: explain_stress
+    steps:
+      - intent: ask_about_stress
+      - action: utter_stress_info
+
+  - story: explain_therapy
+    steps:
+      - intent: ask_about_therapy
+      - action: utter_therapy_info
+
+  - story: explain_medication
+    steps:
+      - intent: ask_about_medication
+      - action: utter_medication_info
+
+  - story: explain_self_care
+    steps:
+      - intent: ask_about_self_care
+      - action: utter_self_care_info
+
+  - story: explain_support_groups
+    steps:
+      - intent: ask_about_support_groups
+      - action: utter_support_groups_info
+
+  - story: explain_stigma
+    steps:
+      - intent: ask_about_mental_health_stigma
+      - action: utter_stigma_info
 
   - story: greet without name
     steps:
       - intent: greet
       - action: utter_greet_no_name
+
   - story: happy path
     steps:
       - intent: greet
@@ -30,7 +71,6 @@ stories:
       - intent: mood_unhappy
       - action: utter_help_suggestions
       - action: utter_acknowledge
-      # - action: utter_help_suggestions
       - intent: affirm
       - action: utter_acknowledge
 
@@ -144,3 +184,7 @@ stories:
       - intent: mental_illness_symptoms
       - action: utter_mental_illness_symptoms
 
+  - story: handle unknown intent
+    steps:
+      - intent: fallback
+      - action: action_handle_unknown_intent

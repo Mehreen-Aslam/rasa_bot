@@ -10,6 +10,27 @@ nlu:
       - good morning
       - good evening
       - what's up?
+      - salaam
+      - assalamu alaikum
+      - wa alaikum assalam
+      - assalamu alaikum wa rahmatullah
+      - assalamu alaikum wa rahmatullahi wa barakatuh
+      - wa alaikum assalam wa rahmatullah
+      - wa alaikum assalam wa rahmatullahi wa barakatuh
+      - marhaba
+      - ahlan wa sahlan
+      - salam alaikum
+      - wa alaikum salam
+      - ya ahlan
+      - bismillah
+      - khair mubarak
+      - allahu akbar
+      - aoa (short for assalamu alaikum)
+      - was (short for wa alaikum assalam)
+      - aswrb (short for assalamu alaikum wa rahmatullahi wa barakatuh)
+      - aswr (short for assalamu alaikum wa rahmatullah)
+      - wws (short for wa alaikum assalam wa rahmatullah)
+
 
   - intent: goodbye
     examples: |
@@ -82,22 +103,15 @@ nlu:
       - I am very happy today
       - Everything is going well
       - Life is beautiful, and I'm loving every moment
-      - I am happy today
       - I'm filled with positivity and joy
       - I feel incredibly lucky and blessed
-      - Everything is going well
       - I'm excited for all the great things happening in my life
       - I'm so grateful for all the good in my life
-      - I am supper happy today
-      - Life is great
+      - I am super happy today
       - My energy is through the roof!
-      - Everything is going well
       - I'm incredibly proud of myself and my progress
       - Today is a fantastic day, and it's only getting better
-      - I am happy today
-      - Life is great
       - Every moment is filled with endless possibilities
-      - Everything is going well
       - I'm radiating confidence and enthusiasm
 
   - intent: mood_unhappy
@@ -264,22 +278,12 @@ nlu:
       - I’m worried about my mental health
       - I’m noticing signs of a mental health issue
       - I’m concerned about the symptoms I’ve been having
+
   - intent: fallback
     examples: |
       - I'm not sure what you mean
+      - [No intent detected]
       - What are you trying to say?
       - Can you explain that again?
       - I don't understand
       - Could you clarify that for me?
-      - I didn't get that, could you rephrase it?
-      - Can you say that differently?
-      - I'm not following
-      - I'm not sure how to respond to that
-      - Sorry, I don't get it
-      - Can you be more specific?
-      - I'm a bit confused by that
-      - Can you elaborate on that?
-      - Could you put that another way?
-      - I'm not sure what you mean by that
-      - Sorry, I didn't understand what you meant
-  

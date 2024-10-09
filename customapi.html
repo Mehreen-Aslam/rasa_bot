@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API Embed Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #app {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f1ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>Gemini API Embed Content</h2>
+        <input type="text" id="userInput" placeholder="Type your content...">
+        <button id="sendButton">Send</button>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const apiKey = 'AIzaSyDiKzCjHDhIsM7Ax8dQHL2Qe1noKd-rm5w'; // Replace with your actual API key
+        const modelName = 'models/gemini-1.5-flash'; // Replace with your actual model name
+
+        document.getElementById('sendButton').onclick = async function() {
+            const userInput = document.getElementById('userInput').value;
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = ''; // Clear previous response
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/${modelName}:embedContent`;
+
+            const requestBody = {
+                content: {
+                    parts: [
+                        { text: userInput }
+                    ]
+                },
+                taskType: "RETRIEVAL_DOCUMENT", // Optional
+                title: "Example Title", // Optional
+                outputDimensionality: 128 // Optional
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                responseDiv.innerHTML = `<strong>Response:</strong> ${JSON.stringify(result)}`;
+            } catch (error) {
+                console.error('Error:', error);
+                responseDiv.innerHTML = `<strong>Error:</strong> ${error.message}`;
+            }
+        };
+    </script>
+</body>
+</html>

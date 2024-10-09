@@ -27,6 +27,15 @@ intents:
   - mental_illness_symptoms
   - affirm
   - deny
+  - fallback
+  - ask_about_depression
+  - ask_about_anxiety
+  - ask_about_stress
+  - ask_about_therapy
+  - ask_about_medication
+  - ask_about_self_care
+  - ask_about_support_groups
+  - ask_about_mental_health_stigma
 
 entities:
   - name
@@ -46,10 +55,53 @@ responses:
     - text: "Let me know if you need help with something specific!"
 
   utter_greet_user:
-    - text: "Hello {name}!"
+    # - text: "Hello {name}!"
+    - text: "Wa alaikum assalam! How can I assist you today?"
+    - text: "Wa alaikum assalam wa rahmatullah! How may I help you?"
+    - text: "Wa alaikum assalam wa rahmatullahi wa barakatuh! What can I do for you today?"
+    - text: "Salaam! How can I be of service?"
+    - text: "Marhaba! What would you like to know?"
+    - text: "Ahlan wa sahlan! How can I assist you today?"
+    - text: "Assalamu alaikum! How can I help you today?"
+    - text: "Wa alaikum salam! How may I assist you?"
+    - text: "Ya ahlan! How can I help?"
+    - text: "Khair Mubarak! How can I assist you?"
+    - text: "Bismillah! How can I help you today?"
+    - text: "Allahu akbar! What can I do for you?"
+    - text: "Aoa! How can I assist you?"
+    - text: "Was! How may I help?"
+    - text: "Aswrb! What can I do for you?"
+    - text: "Aswr! How can I help?"
+    - text: "Wws! How may I assist you?"
+    - text: "Assalamu alaikum wa rahmatullah! How can I be of help today?"
+    - text: "Wa alaikum assalam wa rahmatullahi wa barakatuh! How can I assist you?"
+    - text: "Assalamu alaikum wa rahmatullahi wa barakatuh! How can I help you today?"
   
   utter_happy:
     - text: "I'm glad to hear that you're feeling great!"
+  utter_depression_info:
+    - text: "Depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Common symptoms include feelings of sadness, loss of interest in activities, and changes in appetite."
+
+  utter_anxiety_info:
+    - text: "Anxiety disorders are a group of mental health conditions that include excessive worrying, fear, and unease. Symptoms can include feeling restless, having trouble concentrating, and experiencing panic attacks."
+
+  utter_stress_info:
+    - text: "Stress is a physical and emotional reaction to life's pressures. It can manifest in symptoms like headaches, fatigue, and irritability. Managing stress involves relaxation techniques and lifestyle changes."
+
+  utter_therapy_info:
+    - text: "Therapy can be a valuable tool in managing mental health conditions like depression and anxiety. Cognitive Behavioral Therapy (CBT) is one of the most effective methods for treating these issues."
+
+  utter_medication_info:
+    - text: "Medications like antidepressants and anti-anxiety drugs can help manage symptoms of depression and anxiety. It's important to consult a healthcare provider for the right treatment."
+
+  utter_self_care_info:
+    - text: "Self-care practices like regular exercise, a healthy diet, mindfulness, and good sleep hygiene are effective in managing stress, anxiety, and depression."
+
+  utter_support_groups_info:
+    - text: "Support groups can provide a sense of community and understanding for people dealing with mental health issues. They can be found both online and in person."
+
+  utter_stigma_info:
+    - text: "Stigma around mental health can prevent people from seeking help. Education and open conversations are key to reducing stigma and encouraging people to get the support they need."
 
   utter_greet_no_name:
     - text: "Hello! How can I assist you today?"
@@ -224,5 +276,12 @@ actions:
   - action_increase_happiness
   - action_check_mental_illness_symptoms
   - action_huggingface_fallback
-  
-  
+  - utter_depression_info
+  - utter_anxiety_info
+  - utter_stress_info
+  - utter_therapy_info
+  - utter_medication_info
+  - utter_self_care_info
+  - utter_support_groups_info
+  - utter_stigma_info
+  - action_handle_unknown_intent

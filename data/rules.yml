@@ -1,20 +1,57 @@
 version: "3.1"
 
 rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Respond to bot challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_help_suggestions
 
-- rule: Respond to bot challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_help_suggestions
-  
-- rule: Handle fallback
-  steps:
-  - intent: nlu_fallback
-  - action: action_huggingface_fallback
+  - rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_huggingface_fallback
 
+  - rule: Provide information about depression
+    steps:
+      - intent: ask_about_depression
+      - action: utter_depression_info
 
+  - rule: Provide information about anxiety
+    steps:
+      - intent: ask_about_anxiety
+      - action: utter_anxiety_info
+
+  - rule: Provide information about stress
+    steps:
+      - intent: ask_about_stress
+      - action: utter_stress_info
+
+  - rule: Provide information about therapy
+    steps:
+      - intent: ask_about_therapy
+      - action: utter_therapy_info
+
+  - rule: Provide information about medication
+    steps:
+      - intent: ask_about_medication
+      - action: utter_medication_info
+
+  - rule: Provide information about self-care
+    steps:
+      - intent: ask_about_self_care
+      - action: utter_self_care_info
+
+  - rule: Provide information about support groups
+    steps:
+      - intent: ask_about_support_groups
+      - action: utter_support_groups_info
+
+  - rule: Provide information about mental health stigma
+    steps:
+      - intent: ask_about_mental_health_stigma
+      - action: utter_stigma_info

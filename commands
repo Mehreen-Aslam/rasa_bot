@@ -1,0 +1,32 @@
+#to run the files 
+# to store converstion with the database
+rasa run --endpoints endpoints.yml
+# to check the converstion of the database
+// Find all user messages and bot responses in a conversation
+db.conversations.find(
+    {
+        "events.event": { $in: ["user", "bot"] }
+    },
+    {
+        "events.timestamp": 1,
+        "events.event": 1,
+        "events.text": 1,
+        "events.name": 1
+    }
+).pretty();
+#checking recet converstion one minute before
+// Calculate one minute ago with precision
+var oneMinuteAgo = (Date.now() / 1000) - 60;
+
+// Query for recent events in the last minute
+db.conversations.aggregate([
+    { $unwind: "$events" },
+    {
+        $match: {
+            "events.timestamp": { $gte: oneMinuteAgo },
+            "events.event": { $in: ["user", "bot"] } // Filter for user and bot events
+        }
+    },
+    { $project: { "events.timestamp": 1, "events.event": 1, "events.text": 1 } },
+    { $sort: { "events.timestamp": -1 } } // Sort by timestamp descending
+]).pretty();

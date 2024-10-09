@@ -225,3 +225,32 @@ class ActionCheckMentalIllnessSymptoms(Action):
         
 #         return []
         
+# actions.py
+from rasa_sdk import Action
+from pymongo import MongoClient
+
+class ActionHandleUnknownIntent(Action):
+    def name(self):
+        return "action_handle_unknown_intent"
+
+    def run(self, dispatcher, tracker, domain):
+        user_message = tracker.latest_message.get('text')
+        
+        # Connect to MongoDB
+        client = MongoClient('mongodb://localhost:27017/')
+        db = client['rasa_db']
+        collection = db['conversations']
+
+        # Store the user message in MongoDB
+        collection.insert_one({"user_message": user_message})
+
+        # Fetch a response from the database (if needed)
+        # You can implement your own logic to fetch a response if it exists
+        stored_response = collection.find_one({"user_message": user_message})
+        
+        if stored_response:
+            dispatcher.utter_message(text=f"I remember you asked: {stored_response['user_message']}")
+        else:
+            dispatcher.utter_message(text="I'm not sure how to respond to that. Can you please clarify?")
+
+        return []

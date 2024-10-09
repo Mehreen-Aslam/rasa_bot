@@ -62,7 +62,7 @@ pipeline:
   - name: CountVectorsFeaturizer
   - name: DIETClassifier
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.1
     ambiguity_threshold: 0.1
 
 
